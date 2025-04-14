@@ -1,6 +1,6 @@
-// api/users.php
+
 <?php
-require_once __DIR__ . '/../config/database.php';
+require_once __DIR__ . '/../config/db.php';
 
 header("Content-Type: application/json");
 
@@ -9,9 +9,9 @@ $method = $_SERVER['REQUEST_METHOD'];
 switch($method) {
     case 'GET':
         // Handle GET request (Retrieve Users)
-        $stmt = $conn->query("SELECT * FROM users");
-        $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        echo json_encode($users);
+        $stmt = $conn->query("SELECT * FROM sales_data");
+        $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        echo json_encode($data);
         break;
 
     case 'POST':

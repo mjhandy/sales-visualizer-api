@@ -1,7 +1,6 @@
-//  config/database.php
 <?php
 $host = 'localhost';
-$db_name = 'myapi_db';
+$db_name = 'sales_data';
 $username = 'root';
 $password = '';
 
